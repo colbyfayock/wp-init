@@ -1,0 +1,5 @@
+$(function() {
+
+    $('.fitvids').fitVids();
+
+});
