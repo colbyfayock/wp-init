@@ -1,0 +1,11 @@
+#main {
+
+    &.main-wide {
+        @extend .twelvecol;
+    }
+
+    &.main-narrow {
+        @extend .ninecol;
+    }
+
+}
