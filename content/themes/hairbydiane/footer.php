@@ -4,8 +4,8 @@
 
         <div class="row">
 
-            <h3 class="text-center">Call <strong>(570) 752-2070</strong> today to schedule an appointment!</h3>
-            <p class="text-center subtext">or learn more</p>
+            <h3 class="text-center">Call <strong>(570) 759-3331</strong> today to schedule an appointment!</h3>
+            <p class="text-center subtext"><em>or learn more</em></p>
             <p class="text-center">
                 <a class="button button-primary" href="/hair">View Hair</a>
                 <a class="button button-primary" href="/beauty">View Beauty</a>
@@ -27,8 +27,9 @@
 
             <div class="twelvecol last footer-info text-center">
                 <ul>
-                    <li>570.752.2070</li>
-                    <li>423 West 3rd Street, Nescopeck, PA</li>
+                    <li>570.759.3331</li>
+                    <li>331 N. Market St, Berwick, PA</li>
+                    <li>Info@HairByDianeMFN.com</li>
                     <li>&copy; <?=date('Y')?> <?=bloginfo( 'name' )?></li>
                 </ul>
             </div>

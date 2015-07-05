@@ -40,3 +40,16 @@
 .subtext {
     font-size: .9em;
 }
+
+.center {
+    float: none !important;
+    margin: 0 auto !important;
+}
+
+.float-right {
+    float: right;
+}
+
+.float-left {
+    float: left;
+}

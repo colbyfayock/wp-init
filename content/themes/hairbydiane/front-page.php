@@ -1,102 +1,85 @@
-<? if (have_posts()) : ?>
-    <? while (have_posts()) : the_post(); ?>
+<div class="row">
+    <div class="eightcol center alert-message">
+        <h2 class="text-center">Hair by Diane has joined with The Hair Connection</h2>
+        <p class="text-center">331 N. Market St, Berwick, PA</p>
+        <h3 class="text-center">For appointments call 570-759-3331</h3>
+    </div>
+</div>
 
-        <article id="post-<? the_ID(); ?>" class="row" role="article" itemscope itemtype="http://schema.org/BlogPosting">
+<div class="row">
+    <div class="eightcol center welcome-message">
+        <h2>Welcome!</h2>
+        <p>Hair by Diane is a full service hairstyling studio for men, women, and children. I provide a friendly and relaxed atmosphere with cheerful, professional service. Having over 25 years of experience, I am committed to giving you the excellence you deserve in hair, skin, makeup, and nails.</p>
+        <p>To keep your hair looking beautiful and healthy, the following products used and recommended are Matrix, Biolage, Sebastian, Paul Mitchell, Clairol, It's A 10, OPI and Pharmagel.</p>
+    </div>
+</div>
 
-            <section class="twelvecol entry-content cf" itemprop="articleBody">
-                <? the_content(); ?>
-            </section>
+<div class="row">
+    <div class="eightcol center">
+        <? if (have_posts()) : ?>
+            <? while (have_posts()) : the_post(); ?>
 
-        </article>
+                <article id="post-<? the_ID(); ?>" class="row post" role="article">
 
-        <div class="row">
+                    <header class="twelvecol article-header">
 
-            <div class="fourcol home-recentposts">
+                        <h2 class="h2">
+                            <a href="<? the_permalink() ?>" rel="bookmark" title="<? the_title_attribute(); ?>">
+                                <? the_title(); ?>
+                            </a>
+                        </h2>
 
-                <h3>Recent blog posts!</h3>
+                        <p class="article-meta">
+                            <time class="updated" datetime="<?=get_the_time('Y-m-j')?>" pubdate><?=get_the_time(get_option('date_format'))?></time>
+                            by <span class="author"><?=get_the_author()?></span>
+                            to <?= get_the_category_list(', ')?>
+                        </p>
 
-                <ul>
+                    </header>
 
-                    <?
-                        $args = array(
-                            'post_type' => 'post',
-                            'posts_per_page' => 3,
-                        );
-                    ?>
+                    <section class="twelvecol entry-content cf">
+                        <? the_excerpt(); ?>
+                    </section>
 
-                    <? $the_query = new WP_Query( $args ) ?>
+                </article>
 
-                    <? if ( $the_query->have_posts() ) : ?>
-                        
-                        <? while ( $the_query->have_posts() ) : ?>
+            <? endwhile; ?>
 
-                            <? $the_query->the_post() ?>
-                            <li>
-                                <h4>
-                                    <a href="<? the_permalink() ?>">
-                                        <? the_title(); ?>
-                                    </a>
-                                </h4>
+
+            <div class="row">
+                <? if ( function_exists( 'getPagination' ) ) : ?>
+                    <nav class="twelvecol pagination">
+                        <?=getPagination()?>
+                    </nav>
+                <? else : ?>
+                    <nav class="twelvecol pagination">
+                        <ul>
+                            <li class="prev-link">
+                                <? next_posts_link( __( 'Older' )) ?>
                             </li>
-
-                        <? endwhile; ?>
-                    <? else : ?>
-
-                        <li>
-                            <h4>No recent posts!</h4>
-                        </li>
-
-                    <? endif; ?>
-
-                    <? wp_reset_postdata() ?>
-
-                </ul>
-
-                <p class="home-more">
-                    <a href="#">View All</a>
-                </p>
-
+                            <li class="next-link">
+                                <? previous_posts_link( __( 'Newer' )) ?>
+                            </li>
+                        </ul>
+                    </nav>
+                <? endif; ?>
             </div>
 
-            <div class="fourcol">
+        <? else : ?>
 
-                <h3>About Me</h3>
+            <article id="post-not-found" class="row post">
+                <header class="twelvecol article-header">
+                    <h1>We can't find what you're looking for!</h1>
+                </header>
+                <section class="twelvecol entry-content">
+                    <p>
+                        Try double checking the page url and if you're still having
+                        problems, head back to the <a href="/">home page</a> or
+                        <a href="/contact-us">contact us</a> for more info.
+                    </p>
+                </section>
+            </article>
 
-                <p>Over at the About Me page, you can find more information about, well, me! Whether you're an old friend or a new customer, there's always something new to learn. See what's going on by clicking the link below or check out my blog!</p>
-
-                <p class="home-more">
-                    <a href="#">Read More</a>
-                </p>
-
-            </div>
-
-            <div class="fourcol last">
-
-                <h3>Get in touch</h3>
-
-                <p>Have a question or need some more information about a particular topic? Or maybe you just want to say hello! Head over to the contact page by clicking the link below and send me a message. I will get back to you as soon as I can with the requested information.</p>
-
-                <p class="home-more">
-                    <a href="#">Contact Me</a>
-                </p>
-
-            </div>
-
-        </div>
-
-    <? endwhile; ?>
-<?else : ?>
-
-    <article id="post-not-found" class="row hentry">
-        <header class="twelvecol article-header">
-            <h1>Oops, Post Not Found!</h1>
-        </header>
-        <section class="twelvecol entry-content">
-            <p>Uh Oh. Something is missing. Try double checking things.</p>
-        </section>
-        <footer class="twelvecol article-footer">
-            <p>This is the error message in the page.php template.</p>
-        </footer>
-    </article>
-
-<? endif; ?>
+        <? endif; ?>
+    </div>
+</div>

@@ -1,35 +1,39 @@
-<? if (have_posts()) : ?>
-    <? while (have_posts()) : the_post(); ?>
+<div class="row">
+    <div class="eightcol center">
+        <? if (have_posts()) : ?>
+            <? while (have_posts()) : the_post(); ?>
 
-        <article id="post-<? the_ID(); ?>" class="row" role="article" itemscope itemtype="http://schema.org/BlogPosting">
+                <article id="post-<? the_ID(); ?>" class="row" role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
-            <header class="twelvecol article-header">
+                    <header class="twelvecol article-header">
 
-                <h1 class="page-title" itemprop="headline">
-                    <? the_title(); ?>
-                </h1>
+                        <h1 class="page-title" itemprop="headline">
+                            <? the_title(); ?>
+                        </h1>
 
-            </header>
+                    </header>
 
-            <section class="twelvecol entry-content cf" itemprop="articleBody">
-                <? the_content(); ?>
-            </section>
+                    <section class="twelvecol entry-content cf" itemprop="articleBody">
+                        <? the_content(); ?>
+                    </section>
 
-        </article>
+                </article>
 
-    <? endwhile; ?>
-<?else : ?>
+            <? endwhile; ?>
+        <?else : ?>
 
-    <article id="post-not-found" class="row hentry">
-        <header class="twelvecol article-header">
-            <h1>Oops, Post Not Found!</h1>
-        </header>
-        <section class="twelvecol entry-content">
-            <p>Uh Oh. Something is missing. Try double checking things.</p>
-        </section>
-        <footer class="twelvecol article-footer">
-            <p>This is the error message in the page.php template.</p>
-        </footer>
-    </article>
+            <article id="post-not-found" class="row hentry">
+                <header class="twelvecol article-header">
+                    <h1>Oops, Post Not Found!</h1>
+                </header>
+                <section class="twelvecol entry-content">
+                    <p>Uh Oh. Something is missing. Try double checking things.</p>
+                </section>
+                <footer class="twelvecol article-footer">
+                    <p>This is the error message in the page.php template.</p>
+                </footer>
+            </article>
 
-<? endif; ?>
+        <? endif; ?>
+    </div>
+</div>

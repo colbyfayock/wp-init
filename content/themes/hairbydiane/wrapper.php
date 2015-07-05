@@ -33,14 +33,9 @@
 
         <section class="container cf">
             <div class="content">
-                <div id="main" role="main" class="<?= is_home() ? ' main-narrow' : ' main-wide'?>">
+                <div id="main" role="main" class="main-wide">
                     <? include zurg_template_path(); ?>
                 </div>
-                <? if ( is_home() ) : ?>
-                    <div id="sidebar" role="complementary">
-                        <? get_sidebar( zurg_template_base() ); ?>
-                    </div>
-                <? endif; ?>
             </div>
         </section>
 
