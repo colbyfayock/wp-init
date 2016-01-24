@@ -160,7 +160,7 @@ $button-font-size: 1em;
         }
 
         &:active {
-            color: darken($button-background, 5);
+            color: $button-color;
             background-color: desaturate($button-background, 5);
             border-color: desaturate($button-background, 5);
         }
