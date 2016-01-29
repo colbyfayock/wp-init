@@ -1,0 +1,68 @@
+.widget {
+    margin-bottom: 1.5em;
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        ul {
+            list-style: initial;
+            padding-left: 1.2em;
+            margin-top: .25em;
+        }
+    }
+    li {
+        margin-bottom: .25em;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.widget_search {
+    form {
+        @extend .cf;
+    }
+    label {
+        display: none;
+    }
+    input {
+        float: left;
+    }
+    .widget-search-text {
+        width: 70%;
+        margin-right: 5%;
+    }
+    .widget-search-button {
+        width: 25%;
+    }
+}
+
+.widget_calendar {
+    #calendar_wrap {
+        background-color: $grey1;
+        padding: .5em;
+    }
+    table {
+        width: 100%;
+    }
+    caption {
+        color: white;
+        background-color: $grey4;
+        padding: .5em 0;
+        margin-bottom: 1em;
+    }
+    td {
+        text-align: center;
+        padding: .4em 0;
+        a {
+            color: $color_primary;
+            text-decoration: none;
+        }
+    }
+    #prev {
+        text-align: right;
+    }
+    #next {
+        text-align: left;
+    }
+}

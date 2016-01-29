@@ -1,0 +1,50 @@
+.page-title {
+    font-size: 1.8em;
+<<<<<<< HEAD
+    font-family: $font_serif;
+=======
+>>>>>>> 145289c1c9eab92c0cc1ff44ba841d39002419a3
+}
+
+.page-title-parent {
+    color: $grey3;
+}
+
+<<<<<<< HEAD
+=======
+.section-title {
+    margin-bottom: 2em;
+}
+
+>>>>>>> 145289c1c9eab92c0cc1ff44ba841d39002419a3
+.serif {
+    font-family: $font_serif!important;
+}
+
+<<<<<<< HEAD
+h2,
+.h2 {
+    font-family: $font_serif;
+}
+
+.page {
+    h2,
+    .h2 {
+        font-family: sans-serif;
+        font-weight: 200;
+    }
+=======
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+    font-family: $font_display;
+    text-transform: uppercase;
+}
+
+p:last-child {
+    margin-bottom: 0;
+>>>>>>> 145289c1c9eab92c0cc1ff44ba841d39002419a3
+}

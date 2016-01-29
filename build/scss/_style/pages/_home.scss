@@ -1,0 +1,128 @@
+#hero-main {
+
+    position: relative;
+    height: 25em;
+<<<<<<< HEAD
+    background: url('assets/images/philadelphia-newyorkcity.jpg') no-repeat center center;
+    background-size: auto 100%;
+
+    .content {
+        padding-top: 0;
+    }
+
+    .h1 {
+        @include box-sizing( border-box );
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 5em;
+        height: 5em;
+        color: $grey5;
+        font-size: 2.5em;
+        font-family: $font_serif;
+        font-weight: normal;
+        text-align: center;
+        line-height: 5em;
+        background: $grey1;
+        padding: .65em .5em 0;
+        border-radius: 5em;
+        margin: auto;
+        cursor: default;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+    }
+
+    @include mobile() {
+
+        height: 15em;
+
+        .h1 {
+            font-size: 1.5em;
+        }
+
+    }
+
+}
+
+.home {
+
+    .nav-links {
+
+        & > ul {
+            height: 2.5em;
+            text-align: center;
+            line-height: 2.5em;
+        }
+
+        li {
+
+            & > a {
+                font-size: .9em;
+            }
+
+        }
+
+        @include mobile() {
+
+            & > ul {
+                height: auto;
+                line-height: 1.4em;
+            }
+        }
+=======
+    background: $grey4 url('assets/images/philadelphia-city.jpg') center center;
+
+    .content {
+
+        padding-top: 8.5em;
+
+    }
+
+    h2 {
+
+        font-size: 2.4em;
+        margin-bottom: .4em;
+
+    }
+
+    p {
+        font-size: 1.3em;
+    }
+
+    [class*="button-"] {
+        font-size: .9em;
+    }
+
+    @include mobile() {
+
+        h1 {
+            font-size: 1.5em;
+        }
+
+        p {
+            font-size: 1em;
+        }
+
+    }
+
+}
+
+#hero-links {
+
+    font-size: 1.1em;
+    background: $grey5;
+
+    a {
+        color: white;
+        font-weight: 600;
+        text-transform: uppercase;
+>>>>>>> 145289c1c9eab92c0cc1ff44ba841d39002419a3
+    }
+
+}

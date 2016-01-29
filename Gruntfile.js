@@ -15,22 +15,28 @@ module.exports = function(grunt) {
             desktop: {
                 src: [
 
+<<<<<<< HEAD
                     // Bower components
 
-                    './bower_components/modernizr/modernizr.js',
-
-
-                    // Local components
-
-                    // './local_components/dir/dir.js',
-
+                    './bower_components/jquery.fitvids/jquery.fitvids.js',
 
                     // Main
+=======
+                    './bower_components/jquery.fitvids/jquery.fitvids.js',
+>>>>>>> 145289c1c9eab92c0cc1ff44ba841d39002419a3
 
                     './build/js/main.js'
 
                 ],
+<<<<<<< HEAD
                 dest: './content/themes/colbyfayock/assets/js/colbyfayock.js',
+=======
+<<<<<<< HEAD
+                dest: './content/themes/hkh/assets/js/scripts.js',
+=======
+                dest: './content/themes/kim/assets/js/scripts.js',
+>>>>>>> 145289c1c9eab92c0cc1ff44ba841d39002419a3
+>>>>>>> 78adeb471b5863cf56ace850fbc45868c4dbac8c
             },
 
         },
@@ -45,8 +51,18 @@ module.exports = function(grunt) {
             },
             js: {
                 files: {
+<<<<<<< HEAD
                     './content/themes/colbyfayock/assets/js/colbyfayock.min.js': [
                         './content/themes/colbyfayock/assets/js/colbyfayock.js'
+=======
+<<<<<<< HEAD
+                    './content/themes/hkh/assets/js/scripts.min.js': [
+                        './content/themes/hkh/assets/js/scripts.js'
+=======
+                    './content/themes/kim/assets/js/scripts.min.js': [
+                        './content/themes/kim/assets/js/scripts.js'
+>>>>>>> 145289c1c9eab92c0cc1ff44ba841d39002419a3
+>>>>>>> 78adeb471b5863cf56ace850fbc45868c4dbac8c
                     ]
                 }
             }
@@ -58,7 +74,17 @@ module.exports = function(grunt) {
             },
             dist: {
                 files: {
+<<<<<<< HEAD
                     './content/themes/colbyfayock/style.css': './build/scss/style.scss'
+=======
+<<<<<<< HEAD
+                    './content/themes/hkh/style.css': './build/scss/style.scss',
+                    './content/themes/hkh/assets/css/login.css': './build/scss/login.scss'
+=======
+                    './content/themes/kim/style.css': './build/scss/style.scss',
+                    './content/themes/kim/assets/css/login.css': './build/scss/login.scss'
+>>>>>>> 145289c1c9eab92c0cc1ff44ba841d39002419a3
+>>>>>>> 78adeb471b5863cf56ace850fbc45868c4dbac8c
                 }
             }
         },
@@ -120,7 +146,7 @@ module.exports = function(grunt) {
     });
 
     grunt.registerTask('default', [
-        'rsync'
+        // 'rsync'
     ]);
 
     grunt.registerTask('css', [

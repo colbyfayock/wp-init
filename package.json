@@ -1,5 +1,9 @@
 {
-  "name": "wp-init",
+<<<<<<< HEAD
+  "name": "hkh",
+=======
+  "name": "kim",
+>>>>>>> 145289c1c9eab92c0cc1ff44ba841d39002419a3
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-contrib-concat": "^0.5.1",
