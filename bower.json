@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
-  "name": "hkh",
-=======
-  "name": "kim",
->>>>>>> 145289c1c9eab92c0cc1ff44ba841d39002419a3
+  "name": "colbyfayock",
   "private": true,
   "devDependencies": {
     "bourbon": "~4.2.3",
