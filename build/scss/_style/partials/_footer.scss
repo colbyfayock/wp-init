@@ -1,0 +1,22 @@
+#footer {
+
+    color: $grey1;
+    background-color: $grey5;
+
+    .content {
+        height: 3em;
+        line-height: 3em;
+        padding: 0;
+        @include mobile() {
+            height: auto;
+            line-height: inherit;
+            padding: 1em 0;
+        }
+    }
+
+    .twelvecol {
+        color: $grey2;
+        font-size: .8em;
+    }
+
+}

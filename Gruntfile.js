@@ -17,20 +17,14 @@ module.exports = function(grunt) {
 
                     // Bower components
 
-                    './bower_components/modernizr/modernizr.js',
-
-
-                    // Local components
-
-                    // './local_components/dir/dir.js',
-
+                    './bower_components/jquery.fitvids/jquery.fitvids.js',
 
                     // Main
 
                     './build/js/main.js'
 
                 ],
-                dest: './content/themes/wp-init/assets/js/wp-init.js',
+                dest: './content/themes/hkh/assets/js/scripts.js',
             },
 
         },
@@ -45,8 +39,8 @@ module.exports = function(grunt) {
             },
             js: {
                 files: {
-                    './content/themes/wp-init/assets/js/wp-init.min.js': [
-                        './content/themes/wp-init/assets/js/wp-init.js'
+                    './content/themes/hkh/assets/js/scripts.min.js': [
+                        './content/themes/hkh/assets/js/scripts.js'
                     ]
                 }
             }
@@ -58,7 +52,8 @@ module.exports = function(grunt) {
             },
             dist: {
                 files: {
-                    './content/themes/wp-init/style.css': './build/scss/main.scss'
+                    './content/themes/hkh/style.css': './build/scss/style.scss',
+                    './content/themes/hkh/assets/css/login.css': './build/scss/login.scss'
                 }
             }
         },
