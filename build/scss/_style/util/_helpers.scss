@@ -1,0 +1,155 @@
+// Contain floats
+// nicolasgallagher.com/micro-cf-hack/
+
+.cf {
+  zoom: 1;
+	&:before,
+    &:after {
+        content: "";
+        display: table; }
+	&:after {
+        clear: both;
+    }
+}
+
+.clear {
+    clear: both;
+}
+
+
+// Image replacement
+// http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/
+
+.ir {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+
+// Text alignment
+
+.text-left {
+    text-align: left!important;
+}
+
+.text-center {
+    text-align: center!important;
+}
+
+.text-right {
+    text-align: right!important;
+}
+
+// Display
+
+.display-bl {
+    display: block!important;
+}
+
+.display-ib {
+    display: inline-block!important;
+}
+
+.display-il {
+    display: inline!important;
+}
+
+
+// Position
+
+.alignleft,
+.left {
+    float: left!important;
+}
+
+.alignright,
+.right {
+    float: right!important;
+}
+
+.center {
+    margin: 0 auto!important;
+    float: none!important;
+}
+
+// Push
+
+.push-top {
+    margin-top: .5em;
+}
+
+.push-right {
+    margin-right: .5em;
+}
+
+.push-bottom {
+    margin-bottom: .5em;
+}
+
+.push-left {
+    margin-left: .5em;
+}
+
+// Push
+
+.flat-top {
+    margin-top: 0;
+}
+
+.flat-right {
+    margin-right: 0;
+}
+
+.flat-bottom {
+    margin-bottom: 0;
+}
+
+.flat-left {
+    margin-left: 0;
+}
+
+// Images
+
+.image-right {
+    margin: 0 0 1em 1em;
+    float: right;
+}
+
+.image-left {
+    margin: 0 1em 1em 0;
+    float: left;
+}
+
+
+// Colors
+
+.color-yellow {
+    color: $color_yellow;
+}
+
+.color-white {
+    color: white;
+}
+
+.color-grey-light {
+    color: $grey1;
+}
+
+.color-grey-dark {
+    color: $grey5;
+}
+
+.color-grey-medium {
+    color: $grey3;
+}
+
+.mobile-hide {
+
+    @include mobile() {
+
+        display: none;
+
+    }
+
+}

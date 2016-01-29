@@ -1,0 +1,54 @@
+@import 'content';
+@import 'forms';
+@import 'buttons';
+@import 'widgets';
+
+
+.wp-caption {
+
+    width: auto;
+    background-color: $grey1;
+    padding: 1em;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    p {
+
+        color: $grey4;
+        font-size: .8em;
+        text-align: center;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+    }
+
+    &.alignright {
+        margin: 0 0 1em 1em;
+    }
+
+    &.alignleft {
+        margin: 0 1em 1em 0;
+    }
+
+    @include mobile {
+
+        width: 100%!important;
+
+        &.alignleft,
+        &.alignright {
+            margin: 0 0 1em;
+        }
+
+    }
+
+}
+
+.page-title-parent {
+    font-weight: 200;
+    margin-bottom: .25em;
+}

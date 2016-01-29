@@ -1,0 +1,53 @@
+#hero-main {
+
+    position: relative;
+    height: 25em;
+    background: $grey4 url('assets/images/philadelphia-city.jpg') center center;
+
+    .content {
+
+        padding-top: 8.5em;
+
+    }
+
+    h2 {
+
+        font-size: 2.4em;
+        margin-bottom: .4em;
+
+    }
+
+    p {
+        font-size: 1.3em;
+    }
+
+    [class*="button-"] {
+        font-size: .9em;
+    }
+
+    @include mobile() {
+
+        h1 {
+            font-size: 1.5em;
+        }
+
+        p {
+            font-size: 1em;
+        }
+
+    }
+
+}
+
+#hero-links {
+
+    font-size: 1.1em;
+    background: $grey5;
+
+    a {
+        color: white;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+}

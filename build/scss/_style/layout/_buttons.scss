@@ -1,0 +1,90 @@
+// Base button attributes
+
+%button {
+    @include inline-block;
+    font-family: $font_display;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    text-align: center;
+    padding: .4em 1.4em;
+    border-radius: 10em;
+    outline: 0;
+    cursor: pointer;
+    margin-bottom: 1em;
+}
+
+
+// Build a button from base attributes and provided background color
+
+@mixin buildButton($background, $outline: false) {
+
+    @extend %button;
+
+    @if $outline == true {
+
+        background-color: rgba($background, .1);
+        border: solid 2px $background;
+
+    } @else {
+
+        background-color: $background;
+        border: solid 2px $background;
+
+    }
+
+    @include desktop() {
+
+        @if $outline == true {
+
+            &:hover {
+                background-color: rgba($background, .2);
+            }
+            &:active {
+                background-color: rgba($background, 0);
+            }
+
+        } @else {
+
+            &:hover {
+                background-color: lighten($background, 3);
+            }
+            &:active {
+                background-color: darken($background, 3);
+            }
+
+        }
+    }
+
+}
+
+
+.button-red {
+    @include buildButton($red);
+    color: white;
+}
+
+.button-primary {
+    @include buildButton($grey5);
+    color: white;
+}
+
+.button-yellow {
+    @include buildButton($color_yellow);
+    color: $grey5;
+}
+
+.button-yellow-outline {
+    @include buildButton($color_yellow, true);
+    color: $color_yellow;
+    font-weight: 200;
+}
+
+.button-small {
+    font-size: .8em;
+}
+
+.button-skinny {
+    padding: .2em 1.2em;
+}

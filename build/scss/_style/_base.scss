@@ -1,0 +1,109 @@
+// Apply border-box to all elements
+// http://paulirish.com/2012/box-sizing-border-box-ftw/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: $font_sansSerif;
+    background-color: white;
+}
+
+body {
+    color: $grey5;
+}
+
+.page-wrapper {
+    min-height: 100%;
+    margin-bottom: -3em;
+    @include mobile() {
+        margin-bottom: 0;
+    }
+}
+.page-wrapper:after {
+    display: block;
+    height: 3em;
+    content: "";
+    @include mobile() {
+        display: none;
+    }
+}
+
+a {
+    color: $grey3;
+    text-decoration: none;
+}
+
+hr {
+    width: 2em;
+    border: 0;
+    border-bottom: solid 1px $grey2;
+    @include clearfix();
+    margin: 0 auto;
+}
+
+ul, ol, dd {
+    line-height: 1.5em;
+    padding-left: 1.2em;
+    margin: 0;
+    margin-bottom: 1em;
+}
+
+dt {
+    margin-bottom: .5em;
+}
+
+dd {
+    border-left: solid 1px $grey1;
+}
+
+p {
+    text-align: inherit;
+    line-height: 1.6em;
+    margin-top: 0;
+    margin-bottom: 1em;
+}
+
+code {
+    display: block;
+    color: $grey5;
+    line-height: 1.2em;
+    background-color: $grey1;
+    padding: .75em;
+    border: solid 1px #dedede;
+    margin-bottom: 1em;
+}
+
+p code {
+    @include inline-block;
+    padding: 0 .15em;
+    margin-bottom: 0;
+}
+
+blockquote {
+    background-color: $grey1;
+    padding: 1em 2em;
+    margin: 0;
+    margin-bottom: 1.5em;
+    p {
+        margin-top: 0;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    cite {
+        font-size: .8em;
+    }
+}
+
+details {
+    margin-bottom: 1em;
+}
+
+address {
+    font-style: normal;
+}

@@ -15,22 +15,12 @@ module.exports = function(grunt) {
             desktop: {
                 src: [
 
-                    // Bower components
-
-                    './bower_components/modernizr/modernizr.js',
-
-
-                    // Local components
-
-                    // './local_components/dir/dir.js',
-
-
-                    // Main
+                    './bower_components/jquery.fitvids/jquery.fitvids.js',
 
                     './build/js/main.js'
 
                 ],
-                dest: './content/themes/wp-init/assets/js/wp-init.js',
+                dest: './content/themes/kim/assets/js/scripts.js',
             },
 
         },
@@ -45,8 +35,8 @@ module.exports = function(grunt) {
             },
             js: {
                 files: {
-                    './content/themes/wp-init/assets/js/wp-init.min.js': [
-                        './content/themes/wp-init/assets/js/wp-init.js'
+                    './content/themes/kim/assets/js/scripts.min.js': [
+                        './content/themes/kim/assets/js/scripts.js'
                     ]
                 }
             }
@@ -58,7 +48,8 @@ module.exports = function(grunt) {
             },
             dist: {
                 files: {
-                    './content/themes/wp-init/style.css': './build/scss/main.scss'
+                    './content/themes/kim/style.css': './build/scss/style.scss',
+                    './content/themes/kim/assets/css/login.css': './build/scss/login.scss'
                 }
             }
         },
@@ -120,7 +111,7 @@ module.exports = function(grunt) {
     });
 
     grunt.registerTask('default', [
-        'rsync'
+        // 'rsync'
     ]);
 
     grunt.registerTask('css', [
