@@ -94,16 +94,9 @@ module.exports = function(grunt) {
             },
             deploy: {
                 options: {
-                    src: ".",
-                    dest: "~/website.com",
-                    host: "username@website.com",
-                    delete: false
-                }
-            },
-            pull: {
-                options: {
-                    src: "username@website.com:~/website.com/",
-                    dest: ".",
+                    src: '<%= env.rsync.deploy.src %>',
+                    dest: '<%= env.rsync.deploy.dest %>',
+                    host: '<%= env.rsync.deploy.host %>',
                     delete: false
                 }
             }
