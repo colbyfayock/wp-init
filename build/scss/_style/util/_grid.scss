@@ -12,11 +12,27 @@
 }
 
 .content {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 145289c1c9eab92c0cc1ff44ba841d39002419a3
     width: 100%;
     _width: $grid-page-width;
     max-width: $grid-page-width;
     padding-top: 5em;
     margin: 0 auto;
+<<<<<<< HEAD
+=======
+
+    &.content-skinny {
+        padding-top: 2em;
+    }
+
+    &.content-bare {
+        padding-top: 0;
+    }
+
+>>>>>>> 145289c1c9eab92c0cc1ff44ba841d39002419a3
 }
 
 .content-full {

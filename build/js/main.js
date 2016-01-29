@@ -2,7 +2,11 @@ $(function() {
 
     var navMobile = $('.nav-mobile'),
         navSearch = $('.nav-search'),
+<<<<<<< HEAD
         navLinks = $('.nav-links');
+=======
+        navLinks = $('#nav .nav-links');
+>>>>>>> 145289c1c9eab92c0cc1ff44ba841d39002419a3
 
     navMobile.find('span').click(function() {
         navLinks.toggleClass('open');

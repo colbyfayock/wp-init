@@ -9,7 +9,12 @@
 html,
 body {
     height: 100%;
+<<<<<<< HEAD
     background-color: $grey1;
+=======
+    font-family: $font_sansSerif;
+    background-color: white;
+>>>>>>> 145289c1c9eab92c0cc1ff44ba841d39002419a3
 }
 
 body {
@@ -33,7 +38,11 @@ body {
 }
 
 a {
+<<<<<<< HEAD
     color: $color_primary;
+=======
+    color: $grey3;
+>>>>>>> 145289c1c9eab92c0cc1ff44ba841d39002419a3
     text-decoration: none;
 }
 

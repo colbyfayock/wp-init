@@ -1,6 +1,10 @@
 .container.container-primary {
 
+<<<<<<< HEAD
     color: white;
+=======
+    color: $color_yellow_dark;
+>>>>>>> 145289c1c9eab92c0cc1ff44ba841d39002419a3
     background-color: $color_primary;
 
     p {
@@ -12,8 +16,25 @@
 
 .container.container-secondary {
 
+<<<<<<< HEAD
     color: white;
     background-color: $color_secondary;
+=======
+    color: $grey1;
+    background-color: $grey5;
+
+    p {
+        font-size: .9em;
+        font-weight: 200;
+    }
+
+}
+
+.container.container-grey {
+
+    color: $grey5;
+    background-color: $grey2;
+>>>>>>> 145289c1c9eab92c0cc1ff44ba841d39002419a3
 
     p {
         font-size: .9em;
@@ -23,10 +44,32 @@
 }
 
 article {
+<<<<<<< HEAD
     margin-bottom: 2em;
     .article-header {
         margin-bottom: .5em;
     }
+=======
+
+    margin-bottom: 2em;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    .article-header {
+
+        margin-bottom: .5em;
+
+        .single-post & {
+            padding-bottom: 1.5em;
+            border-bottom: solid 1px $grey1;
+            margin-bottom: 1.5em;
+        }
+
+    }
+
+>>>>>>> 145289c1c9eab92c0cc1ff44ba841d39002419a3
     .h2 {
         margin-bottom: .5em;
         a {
@@ -34,14 +77,26 @@ article {
             text-decoration: none;
         }
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 145289c1c9eab92c0cc1ff44ba841d39002419a3
     .article-meta {
         color: $grey3;
         font-size: .9em;
         margin: 0;
     }
+<<<<<<< HEAD
     .article-footer {
         font-size: .9em;
     }
+=======
+
+    .article-footer {
+        font-size: .9em;
+    }
+
+>>>>>>> 145289c1c9eab92c0cc1ff44ba841d39002419a3
 }
 
 .pagination {

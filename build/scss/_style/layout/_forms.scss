@@ -1,6 +1,10 @@
 input,
+<<<<<<< HEAD
 textarea,
 select {
+=======
+textarea {
+>>>>>>> 145289c1c9eab92c0cc1ff44ba841d39002419a3
     font-size: .8em;
     -webkit-appearance: none;
     padding: .5em;
@@ -13,6 +17,7 @@ textarea {
     background-color: white;
 }
 
+<<<<<<< HEAD
 select {
     max-width: 100%;
     background-image: url('assets/images/dropdown-arrow.png');
@@ -35,6 +40,8 @@ select {
 
 }
 
+=======
+>>>>>>> 145289c1c9eab92c0cc1ff44ba841d39002419a3
 .wpcf7-form {
 
     input,
@@ -44,8 +51,12 @@ select {
     }
 
     input,
+<<<<<<< HEAD
     textarea,
     select {
+=======
+    textarea {
+>>>>>>> 145289c1c9eab92c0cc1ff44ba841d39002419a3
         padding: .8em;
         margin-top: .5em;
     }
