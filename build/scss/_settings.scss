@@ -1,0 +1,79 @@
+$assets_path: 'assets';
+$img_path: #{$assets_path}/img;
+$fonts_path: #{$assets_path}/fonts;
+
+/****************************************
+ * Scheme (Colors, etc)
+ ****************************************/
+
+// Scheme
+
+$flat: 'true'; // true, false, 'almost-flat'
+
+// Colors
+
+$grey1:  #e4e6e9;
+$grey2:  #dededf;
+$grey3:  #9198a3;
+$grey4:  #4c4e50;
+$grey5:  #2d3133;
+$red:    #8f0e0c;
+$blue:   #373b4c;
+$purple: #552e84;
+$teal: #007079;
+
+$error-red: $red;
+
+$primary-color: $teal;
+$secondary-color: $grey4;
+
+// Copy
+
+$lato: 'Lato', sans-serif;
+$bitter: 'Bitter', Georgia, serif;
+
+$sans-serif: $lato;
+$serif: $bitter;
+
+$default-font: $sans-serif;
+
+$link-color: $secondary-color;
+$link-underline: true;
+
+
+/****************************************
+ * Objects (Buttons, etc)
+ ****************************************/
+
+// Buttons
+
+$primary-button-color: $secondary-color;
+$secondary-button-color: $primary-color;
+
+
+/****************************************
+ * Partials (Nav, Footer, etc)
+ ****************************************/
+
+// Nav
+
+$color-nav: white;
+$color-nav-logo: $grey5;
+$color-nav-links: $grey5;
+
+$nav-height: 2.5em;
+
+// Footer
+
+$color-footer: white;
+$color-footer-links: $grey5;
+
+
+/****************************************
+ * Body (Content, etc)
+ ****************************************/
+
+// Body
+
+$color-body: white;
+

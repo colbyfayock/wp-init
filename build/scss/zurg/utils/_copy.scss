@@ -1,0 +1,114 @@
+h1, .h1 {
+  font-size: 4.5em;
+  font-weight: bold;
+  font-family: $zurg-sans-serif;
+  line-height: 1em;
+  margin-top: 0;
+  margin-bottom: 0;
+  @include small() {
+    font-size: 2.3em;
+  }
+}
+
+h2, .h2 {
+  color: $zurg-grey3;
+  font-size: 1.5em;
+  font-weight: normal;
+  font-family: $zurg-serif;
+  margin-top: 0;
+  @include small() {
+    font-size: 1em;
+  }
+}
+
+h3, .h3 {
+  font-family: $zurg-serif;
+  font-size: 1.6em;
+  line-height: 1.2em;
+  margin-bottom: .3em;
+}
+
+h4, .h4 {
+  font-family: $zurg-sans-serif;
+  font-size: 1.2em;
+  line-height: 1.2em;
+  margin: .6em 0;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a {
+    text-decoration: none;
+}
+
+p {
+  font-size: 1em;
+  line-height: 1.4em;
+  margin: .6em 0;
+}
+
+a {
+  color: $zurg-grey5;
+  &:hover {
+    color: $zurg-primary-color;
+  }
+  &:active {
+    color: darken($zurg-primary-color, 5);
+  }
+}
+
+ul, ol, dd {
+    padding-left: 1.2em;
+    margin: 0;
+}
+
+ul {
+    padding-left: 0;
+}
+
+ul.no-styles {
+    list-style: none;
+}
+
+dd {
+    border-left: solid 1px $zurg-grey1;
+}
+
+p {
+    text-align: inherit;
+}
+
+hr {
+    border-color: $zurg-grey1;
+    margin-top: 0;
+    margin-bottom: 2.5em;
+}
+
+code {
+    display: block;
+    line-height: 1.2em;
+    background-color: $zurg-grey1;
+    padding: .75em;
+    border: solid 1px darken($zurg-grey1, 10);
+    margin-bottom: 1em;
+}
+
+p code {
+    @include inline-block;
+    padding: 0 .15em;
+    margin-bottom: 0;
+}
+
+blockquote {
+    background-color: $zurg-grey1;
+    padding: 1em 2em;
+    margin: 0;
+    margin-bottom: 1.5em;
+    p {
+        margin-top: 0;
+    }
+    cite {
+        font-size: .8em;
+    }
+}
