@@ -3,7 +3,7 @@ Wordpress Init
 
 Starting point for projects using [Wordpress Skeleton] as a base and bits 'n pieces from [Bones]
 
-Some of the fun stuff include:
+Some of the fun stuff includes:
 
  - Wordpress? Wordpress!
  - Grunt
