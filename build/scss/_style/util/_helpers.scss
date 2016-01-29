@@ -27,7 +27,6 @@
 }
 
 
-<<<<<<< HEAD
 // Colors
 
 .color-red {
@@ -35,8 +34,6 @@
 }
 
 
-=======
->>>>>>> 145289c1c9eab92c0cc1ff44ba841d39002419a3
 // Text alignment
 
 .text-left {
@@ -51,38 +48,10 @@
     text-align: right!important;
 }
 
-<<<<<<< HEAD
-
-// Position
-
-=======
-// Display
-
-.display-bl {
-    display: block!important;
-}
-
-.display-ib {
-    display: inline-block!important;
-}
-
-.display-il {
-    display: inline!important;
-}
-
-
-// Position
-
-.alignleft,
->>>>>>> 145289c1c9eab92c0cc1ff44ba841d39002419a3
 .left {
     float: left!important;
 }
 
-<<<<<<< HEAD
-=======
-.alignright,
->>>>>>> 145289c1c9eab92c0cc1ff44ba841d39002419a3
 .right {
     float: right!important;
 }
@@ -92,45 +61,6 @@
     float: none!important;
 }
 
-<<<<<<< HEAD
-=======
-// Push
-
-.push-top {
-    margin-top: .5em;
-}
-
-.push-right {
-    margin-right: .5em;
-}
-
-.push-bottom {
-    margin-bottom: .5em;
-}
-
-.push-left {
-    margin-left: .5em;
-}
-
-// Push
-
-.flat-top {
-    margin-top: 0;
-}
-
-.flat-right {
-    margin-right: 0;
-}
-
-.flat-bottom {
-    margin-bottom: 0;
-}
-
-.flat-left {
-    margin-left: 0;
-}
-
->>>>>>> 145289c1c9eab92c0cc1ff44ba841d39002419a3
 // Images
 
 .image-right {
@@ -144,7 +74,6 @@
 }
 
 
-<<<<<<< HEAD
 // Push
 
 .push-left {
@@ -161,36 +90,4 @@
 
 .push-bottom {
     margin-bottom: .5em;
-=======
-// Colors
-
-.color-yellow {
-    color: $color_yellow;
-}
-
-.color-white {
-    color: white;
-}
-
-.color-grey-light {
-    color: $grey1;
-}
-
-.color-grey-dark {
-    color: $grey5;
-}
-
-.color-grey-medium {
-    color: $grey3;
-}
-
-.mobile-hide {
-
-    @include mobile() {
-
-        display: none;
-
-    }
-
->>>>>>> 145289c1c9eab92c0cc1ff44ba841d39002419a3
 }
