@@ -1,0 +1,41 @@
+#peer-endorsements {
+
+    h4 {
+        margin-bottom: .25em;
+    }
+
+    h5 {
+        color: $grey3;
+        font-family: $font_sansSerif;
+        font-weight: 400;
+        margin-bottom: 0;
+    }
+
+    .endorsements-avatar {
+        position: relative;
+        @include inline-block();
+        overflow: hidden;
+        width: 5em;
+        height: 5em;
+        background-size: cover;
+        background-position: center center;
+        border-radius: 5em;
+        margin-bottom: 1em;
+    }
+
+    .endorsements-cta {
+
+        margin-top: 2em;
+
+        p {
+            margin-bottom: 0;
+        }
+
+        .button-primary {
+            font-size: .7em;
+            margin-bottom: 0;
+        }
+
+    }
+
+}

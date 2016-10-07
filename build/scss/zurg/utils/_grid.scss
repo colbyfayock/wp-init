@@ -1,0 +1,10 @@
+// Grid
+
+.content-wrapper {
+    width: 100%;
+    padding: 0 10%;
+    & > div {
+        max-width: 40em;
+        margin: 0 auto;
+    }
+}

@@ -1,0 +1,46 @@
+// Base button attributes
+
+%button {
+    @include inline-block;
+    text-decoration: none;
+    // text-shadow: -1px -1px rgba(0, 0, 0, .5);
+    text-align: center;
+    padding: .5em .7em;
+    border-radius: .25em;
+    outline: 0;
+    // box-shadow: inset 0 1px rgba(255, 255, 255, .25);
+    cursor: pointer;
+    margin-bottom: 1em;
+}
+
+
+// Build a button from base attributes and provided background color
+
+@mixin buildButton($background) {
+
+    @extend %button;
+
+    background-color: $background;
+    border: solid 1px darken($background, 3);
+
+    @include desktop() {
+        &:hover {
+            background-color: lighten($background, 3);
+        }
+        &:active {
+            background-color: darken($background, 3);
+        }
+    }
+
+}
+
+
+.button-red {
+    @include buildButton($red);
+    color: white;
+}
+
+.button-primary {
+    @include buildButton($color_primary);
+    color: white;
+}

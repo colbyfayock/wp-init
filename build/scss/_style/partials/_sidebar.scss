@@ -1,0 +1,34 @@
+#sidebar {
+    @extend .threecol;
+    @extend .last;
+}
+
+.sidebar-press {
+
+    background-color: $grey4;
+    padding: 1.5em;
+
+    h4 {
+        color: white;
+    }
+
+    label {
+        color: $grey2;
+        font-size: .8em;
+    }
+
+    input[type="submit"] {
+        margin: 0;
+    }
+
+    .row {
+
+        margin-bottom: 1em;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+    }
+
+}

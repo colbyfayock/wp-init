@@ -1,32 +1,36 @@
-$(function() {
+require({
+    paths: {
 
-    // window.fbAsyncInit = function() {
-    //     FB.init({
-    //         appId      : '',
-    //         xfbml      : true,
-    //         version    : 'v2.4'
-    //     });
-    // };
+        // Plug-ins
+        'validate'   : 'lib/jquery-validate-1.12.0pre.min',
+        'hippify'    : 'lib/hippify.min',
+        'magnific'   : 'lib/jquery.magnific-popup.min',
 
-    // Load Social SDKs Async
-    (function(doc, script) {
-        var js,
-        fjs = doc.getElementsByTagName(script)[0],
-        add = function(url, id) {
-        if (doc.getElementById(id)) {return;}
-        js = doc.createElement(script);
-        js.src = url;
-        id && (js.id = id);
-        fjs.parentNode.insertBefore(js, fjs);
-        };
-        // Google+
-        // add('//apis.google.com/js/plusone.js');
-        // Facebook SDK
-        // add('//connect.facebook.net/en_US/sdk.js', 'facebook-jssdk');
-        // Twitter SDK
-        // add('//platform.twitter.com/widgets.js', 'twitter-wjs');
-        // Pinterest
-        // add('//assets.pinterest.com/js/pinit.js');
-    }(document, 'script'));
+        // Modules
+        'functions'  : 'lib/functions'
 
+    }
+})
+
+require(['hippify']);
+
+
+require(['magnific'], function() {
+	$('.magnific').magnificPopup({type:'image'});
+});
+
+
+// Modules
+
+require(['lib/modules/header'], function(paraHeader) {
+    paraHeader.paraHeader();
+});
+
+
+require(['lib/modules/forms'], function(forms) {
+    forms.formValidate('form');
+});
+
+require(['lib/modules/drawers'], function(drawers) {
+	drawers.drawer('.dresser .handle');
 });

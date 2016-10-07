@@ -17,20 +17,12 @@ module.exports = function(grunt) {
 
                     // Bower components
 
-                    './bower_components/modernizr/modernizr.js',
-
-
-                    // Local components
-
-                    // './local_components/dir/dir.js',
-
-
-                    // Main
+                    './bower_components/jquery.fitvids/jquery.fitvids.js',
 
                     './build/js/main.js'
 
                 ],
-                dest: './content/themes/wp-init/assets/js/wp-init.js',
+                dest: './content/themes/colbyfayock/assets/js/colbyfayock.js',
             },
 
         },
@@ -45,8 +37,8 @@ module.exports = function(grunt) {
             },
             js: {
                 files: {
-                    './content/themes/wp-init/assets/js/wp-init.min.js': [
-                        './content/themes/wp-init/assets/js/wp-init.js'
+                    './content/themes/colbyfayock/assets/js/scripts.min.js': [
+                        './content/themes/colbyfayock/assets/js/scripts.js'
                     ]
                 }
             }
@@ -58,7 +50,7 @@ module.exports = function(grunt) {
             },
             dist: {
                 files: {
-                    './content/themes/wp-init/style.css': './build/scss/main.scss'
+                    './content/themes/colbyfayock/style.css': './build/scss/style.scss'
                 }
             }
         },
@@ -120,7 +112,7 @@ module.exports = function(grunt) {
     });
 
     grunt.registerTask('default', [
-        'rsync'
+        // 'rsync'
     ]);
 
     grunt.registerTask('css', [
@@ -128,8 +120,9 @@ module.exports = function(grunt) {
     ]);
 
     grunt.registerTask('js', [
-        'concat',
-        'uglify'
+        // 'concat',
+        // 'uglify'
+        // node r.js -o build.js
     ]);
 
     grunt.registerTask('build', [

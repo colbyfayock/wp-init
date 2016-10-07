@@ -1,0 +1,80 @@
+#hero-main {
+
+    position: relative;
+    height: 25em;
+    background: url('assets/images/philadelphia-newyorkcity.jpg') no-repeat center center;
+    background-size: auto 100%;
+
+    .content {
+        padding-top: 0;
+    }
+
+    .h1 {
+        @include box-sizing( border-box );
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 5em;
+        height: 5em;
+        color: $grey5;
+        font-size: 2.5em;
+        font-family: $font_serif;
+        font-weight: normal;
+        text-align: center;
+        line-height: 5em;
+        background: $grey1;
+        padding: .65em .5em 0;
+        border-radius: 5em;
+        margin: auto;
+        cursor: default;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+    }
+
+    @include mobile() {
+
+        height: 15em;
+
+        .h1 {
+            font-size: 1.5em;
+        }
+
+    }
+
+}
+
+.home {
+
+    .nav-links {
+
+        & > ul {
+            height: 2.5em;
+            text-align: center;
+            line-height: 2.5em;
+        }
+
+        li {
+
+            & > a {
+                font-size: .9em;
+            }
+
+        }
+
+        @include mobile() {
+
+            & > ul {
+                height: auto;
+                line-height: 1.4em;
+            }
+        }
+
+    }
+
+}

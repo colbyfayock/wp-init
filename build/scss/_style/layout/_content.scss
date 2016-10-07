@@ -1,0 +1,81 @@
+.container.container-primary {
+
+    color: white;
+    background-color: $color_primary;
+
+    p {
+        font-size: .9em;
+        font-weight: 200;
+    }
+
+}
+
+.container.container-secondary {
+
+    color: white;
+    background-color: $color_secondary;
+
+    p {
+        font-size: .9em;
+        font-weight: 200;
+    }
+
+}
+
+article {
+    margin-bottom: 2em;
+    .article-header {
+        margin-bottom: .5em;
+    }
+
+    .h2 {
+        margin-bottom: .5em;
+        a {
+            color: $grey4;
+            text-decoration: none;
+        }
+    }
+
+    .article-meta {
+        color: $grey3;
+        font-size: .9em;
+        margin: 0;
+    }
+
+    .article-footer {
+        font-size: .9em;
+    }
+
+}
+
+.pagination {
+    margin-bottom: 2em;
+    ul {
+        @extend .cf;
+        @extend %horizontal-list;
+        margin-bottom: 1em;
+    }
+    a,
+    span {
+        color: $grey5;
+        font-size: .9em;
+        text-decoration: none;
+        background-color: #eee;
+        padding: .4em .6em;
+        border-radius: .25em;
+    }
+    span {
+        color: $grey1;
+        background-color: $grey5;
+    }
+}
+
+.archive-title {
+    padding-bottom: .4em;
+    border-bottom: solid 1px $grey1;
+    margin-bottom: 1em;
+    span {
+        color: $grey3;
+        font-weight: normal;
+    }
+}
