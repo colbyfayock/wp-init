@@ -1,5 +1,23 @@
 <?
 
+/*
+ * Shortcodes
+ * --
+ * Can accept an argument which is a key=>value array of parameters passed in
+ * Must return a string, replaces shortcode when rendered
+ * --
+ * function shortcode( $args ) {
+ *
+ *    // $args passed in as key => value array
+ *    // return the result
+ *
+ *    return 'shortcode';
+ *
+ * }
+ * add_shortcode( 'get_shortcode', 'shortcode' );
+ */
+
+
 // Returns Vimeo embed wrapped in a fitvid container
 
 function vimeoEmbed( $atts ){
