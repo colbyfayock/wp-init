@@ -1,4 +1,0 @@
-ColbyFayock
-===========
-
-Personal Portfolio
