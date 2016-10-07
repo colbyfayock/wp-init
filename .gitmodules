@@ -1,6 +1,3 @@
 [submodule "wp"]
 	path = wp
 	url = git://github.com/WordPress/WordPress.git
-[submodule "content/themes/wp-zurg"]
-	path = content/themes/wp-zurg
-	url = https://github.com/colbyfayock/wp-zurg
