@@ -11,10 +11,15 @@
  *    // $args passed in as key => value array
  *    // return the result
  *
- *    return 'shortcode';
+ *    extract( shortcode_atts( array(
+ *        'param' => false
+ *    ), $atts ) );
+ *
+ *    return 'shortcode - ' . $param;
  *
  * }
  * add_shortcode( 'get_shortcode', 'shortcode' );
+ * Usage: [get_shortcode param="value"]
  */
 
 

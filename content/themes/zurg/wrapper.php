@@ -21,7 +21,7 @@
 
         <link rel="pingback" href="<? bloginfo('pingback_url'); ?>">
 
-        <link rel="stylesheet" href="<?=autoVer( getRelativeUrl() . '/style.css' )?>">
+        <link rel="stylesheet" href="<?=ZurgHelpers::auto_version( ZurgHelpers::get_relative_url() . '/style.css' )?>">
 
         <? wp_head(); ?>
 
@@ -29,17 +29,17 @@
 
     <body <? body_class(); ?>>
 
-        <? get_header( zurg_template_base() ); ?>
+        <? get_header( ZurgWrapper::zurg_template_base() ); ?>
 
         <section class="container cf">
             <div class="content">
                 <div id="main" role="main" class="main-wide">
-                    <? include zurg_template_path(); ?>
+                    <? include ZurgWrapper::zurg_template_path(); ?>
                 </div>
             </div>
         </section>
 
-        <? get_footer( zurg_template_base() ); ?>
+        <? get_footer( ZurgWrapper::zurg_template_base() ); ?>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="<?=get_template_directory_uri()?>/assets/js/jquery.min.js"><\/script>')</script>
@@ -48,14 +48,14 @@
 
         <? wp_footer(); ?>
 
-        <? if( getGoogleAnalyticsId() ) : ?>
+        <? if( $google_analytics_id = ZurgHelpers::get_google_analytics_id() ) : ?>
             <script>
                 (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
                 function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
                 e=o.createElement(i);r=o.getElementsByTagName(i)[0];
                 e.src='//www.google-analytics.com/analytics.js';
                 r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-                ga('create','<?=getGoogleAnalyticsId()?>');ga('send','pageview');
+                ga('create','<?= $google_analytics_id ?>');ga('send','pageview');
             </script>
         <? endif; ?>
 
