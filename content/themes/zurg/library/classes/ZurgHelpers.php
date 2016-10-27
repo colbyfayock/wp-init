@@ -7,14 +7,11 @@
 
 class ZurgHelpers extends Zurg {
 
-    // Remove WP version from RSS
-
-    static function testingthis() {
-        return 'asdf';
+    public function __construct() {
     }
 
 
-    static function get_relative_url() {
+    public function get_relative_url() {
         return wp_make_link_relative( get_bloginfo('template_url') );
     }
 
@@ -22,15 +19,17 @@ class ZurgHelpers extends Zurg {
     // Autoversion files
     // Ex: style.1362807796.css
 
-    static function auto_version($url){
+    public function auto_version($url){
         $path = pathinfo($url);
         $ver = '.'.filemtime($_SERVER['DOCUMENT_ROOT'].$url).'.';
         echo $path['dirname'].'/'.str_replace('.', $ver, $path['basename']);
     }
     
 
-    static function get_google_analytics_id() {
+    public function get_google_analytics_id() {
         return !empty(get_option('zurg_settings_analytics')['google_analytics']) ? get_option('zurg_settings_analytics')['google_analytics'] : false;
     }
 
 }
+
+new ZurgHelpers();

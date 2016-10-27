@@ -43,22 +43,9 @@
     <? endwhile; ?>
 
     <div class="row">
-        <? if ( function_exists( 'getPagination' ) ) : ?>
-            <nav class="twelvecol pagination">
-                <?=getPagination()?>
-            </nav>
-        <? else : ?>
-            <nav class="twelvecol pagination">
-                <ul>
-                    <li class="prev-link">
-                        <? next_posts_link( __( 'Older' )) ?>
-                    </li>
-                    <li class="next-link">
-                        <? previous_posts_link( __( 'Newer' )) ?>
-                    </li>
-                </ul>
-            </nav>
-        <? endif; ?>
+        <nav class="twelvecol pagination">
+            <?=ZurgContent::get_pagination()?>
+        </nav>
     </div>
 
 <? else : ?>

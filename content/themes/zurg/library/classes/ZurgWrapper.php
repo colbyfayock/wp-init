@@ -19,7 +19,7 @@ class ZurgWrapper extends Zurg {
 
     static $base;
 
-    public function wrap( $template ) {
+    static function wrap( $template ) {
 
         self::$main_template = $template;
 

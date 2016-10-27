@@ -10,6 +10,18 @@ class ZurgHead extends Zurg {
     public function __construct() {
 
         add_action( 'init', array( $this, 'cleanup_head' ) );
+        
+
+        // Add RSS feed links
+
+        add_theme_support('automatic-feed-links');
+
+
+        // // Removes script and CSS file enqueueing for WP Plugin Contact Form 7
+        // // Styles included in primary stylesheet
+
+        // remove_action( 'wp_enqueue_scripts', 'wpcf7_enqueue_scripts' );
+        // remove_action( 'wp_enqueue_scripts', 'wpcf7_enqueue_styles' );
 
     }
 
@@ -89,6 +101,7 @@ class ZurgHead extends Zurg {
     public function clean_galleries($css) {
         return preg_replace( "!<style type='text/css'>(.*?)</style>!s", '', $css );
     }
+
 
 }
 

@@ -13,34 +13,26 @@ class Zurg {
 
     public function __construct() {
 
-
         add_action( 'after_setup_theme', array( $this, 'launch_theme' ), 16 );
 
     }
 
     public function launch_theme() {
 
-        require_once( 'theme-support.php' );
-        require_once( 'misc.php' );
-
         require_once( 'classes/ZurgAdmin.php' );
         require_once( 'classes/ZurgCustomSettings.php' );
+        require_once( 'classes/ZurgTheme.php' );
 
         require_once( 'classes/ZurgWrapper.php' );
         require_once( 'classes/ZurgHead.php' );
         require_once( 'classes/ZurgMenus.php' );
         require_once( 'classes/ZurgSidebars.php' );        
         require_once( 'classes/ZurgSearch.php' );
+        require_once( 'classes/ZurgContent.php' );
         require_once( 'classes/ZurgImages.php' );
-
-        require_once( 'shortcodes.php' );
-        // require_once( 'contact-form-7.php' );
+        require_once( 'classes/ZurgShortcodes.php' );
 
         require_once( 'classes/ZurgHelpers.php' );
-
-
-        addThemeSupport(); // See theme-support.php
-        add_filter( 'excerpt_more', 'cleanExcerptLinks' );
 
     }
 

@@ -7,7 +7,12 @@ class ZurgMenus extends Zurg {
 
     public function __construct() {
 
-        // EditURI link
+        add_action( 'init', array( $this, 'register_menus' ) );
+
+    }
+
+
+    public function register_menus() {
 
         add_theme_support( 'menus' );
 
