@@ -8,7 +8,7 @@
 class ZurgWrapper extends Zurg {
 
     public function __construct() {
-        add_filter( 'template_include', array( 'ZurgWrapper', 'wrap' ), 99 );
+        add_filter( 'template_include', array( $this, 'wrap' ), 99 );
     }
 
     // Stores the full path to the main template file
@@ -48,3 +48,5 @@ class ZurgWrapper extends Zurg {
     }
 
 }
+
+new ZurgWrapper();

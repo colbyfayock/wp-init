@@ -9,6 +9,12 @@ class ZurgHead extends Zurg {
 
     public function __construct() {
 
+        add_action( 'init', array( $this, 'cleanup_head' ) );
+
+    }
+
+    public function cleanup_head() {
+
         // EditURI link
 
         remove_action( 'wp_head', 'rsd_link' );
@@ -41,10 +47,10 @@ class ZurgHead extends Zurg {
 
         // Remove WP version from RSS
 
-        add_filter( 'the_generator', array( 'ZurgHead', 'remove_rss_version' ) );
+        add_filter( 'the_generator', array( $this, 'remove_rss_version' ) );
         
 
-        add_filter( 'gallery_style', array( 'ZurgHead', 'clean_galleries' ) );
+        add_filter( 'gallery_style', array( $this, 'clean_galleries' ) );
         
 
         // WP version
@@ -54,12 +60,13 @@ class ZurgHead extends Zurg {
 
         // Removes query parameter added to style inserts
 
-        add_filter( 'style_loader_src', array( 'ZurgHead', 'remove_version_query' ), 9999 );
+        add_filter( 'style_loader_src', array( $this, 'remove_version_query' ), 9999 );
 
 
         // Removes query parameter added to script inserts
         
-        add_filter( 'script_loader_src', array( 'ZurgHead', 'remove_version_query' ), 9999 );
+        add_filter( 'script_loader_src', array( $this, 'remove_version_query' ), 9999 );
+
     }
 
 
@@ -84,3 +91,5 @@ class ZurgHead extends Zurg {
     }
 
 }
+
+new ZurgHead();

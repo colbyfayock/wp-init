@@ -19,7 +19,7 @@
                 <? endif; ?>
             </div>
             <div class="eightcol last nav-links">
-                <?=setPrimaryNav()?>
+                <?=ZurgMenus::get_primary_nav()?>
             </div>
         </div>
 

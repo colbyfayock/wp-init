@@ -13,39 +13,37 @@ class Zurg {
 
     public function __construct() {
 
-        require_once( 'classes/ZurgHelpers.php' );
-        require_once( 'classes/ZurgHead.php' );
-        new ZurgHead();
+
+        add_action( 'after_setup_theme', array( $this, 'launch_theme' ), 16 );
+
+    }
+
+    public function launch_theme() {
 
         require_once( 'theme-support.php' );
         require_once( 'misc.php' );
 
         require_once( 'classes/ZurgAdmin.php' );
-        new ZurgAdmin();
-
-        require_once( 'custom-settings.php' );
+        require_once( 'classes/ZurgCustomSettings.php' );
 
         require_once( 'classes/ZurgWrapper.php' );
-        new ZurgWrapper();
+        require_once( 'classes/ZurgHead.php' );
+        require_once( 'classes/ZurgMenus.php' );
+        require_once( 'classes/ZurgSidebars.php' );        
+        require_once( 'classes/ZurgSearch.php' );
+        require_once( 'classes/ZurgImages.php' );
 
-        require_once( 'sidebar.php' );
-        require_once( 'menus.php' );
-        require_once( 'images.php' );
         require_once( 'shortcodes.php' );
-        require_once( 'search.php' );
         // require_once( 'contact-form-7.php' );
 
-        add_action( 'after_setup_theme', array('Zurg', 'launch_theme'), 16 );
+        require_once( 'classes/ZurgHelpers.php' );
 
-    }
 
-    public function launch_theme() {
-        add_action( 'init', 'cleanupHead' ); // See head.php
         addThemeSupport(); // See theme-support.php
-        add_action( 'widgets_init', 'registerSidebars' ); // See sidebar.php
-        add_filter( 'get_search_form', 'getSearchForm' ); // See search.php
-        add_filter( 'the_content', 'cleanImageTags' ); // See images.php
         add_filter( 'excerpt_more', 'cleanExcerptLinks' );
+
     }
 
 }
+
+new Zurg();

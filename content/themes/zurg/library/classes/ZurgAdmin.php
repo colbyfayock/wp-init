@@ -23,3 +23,5 @@ class ZurgAdmin extends Zurg {
     }
 
 }
+
+new ZurgAdmin();
