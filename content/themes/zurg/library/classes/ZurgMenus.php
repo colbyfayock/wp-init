@@ -82,14 +82,10 @@ class ZurgMenus extends Zurg {
             'link_after'  => false,
         );
 
-        add_filter('wp_page_menu', array('ZurgMenus', 'clean_primary_nav_backup'));
+        add_filter('wp_page_menu', array('ZurgMenus', 'clean_page_menu'));
 
         wp_page_menu( $settings );
 
-    }
-
-    public function clean_primary_nav_backup($menu) {
-        return preg_replace( array( '#^<div[^>]*>#', '#</div>$#' ), '', $menu );
     }
 
 
@@ -99,7 +95,7 @@ class ZurgMenus extends Zurg {
     // wp_nav_menu($array)
     // http://codex.wordpress.org/Function_Reference/wp_nav_menu
 
-    public function set_footer_links() {
+    public function get_footer_links($depth = 0) {
 
         $settings = array(
             'theme_location'  => 'footer-links',
@@ -110,7 +106,7 @@ class ZurgMenus extends Zurg {
             'menu_class'      => false,
             'menu_id'         => false,
             'echo'            => true,
-            'fallback_cb'     => false,
+            'fallback_cb'     => array('ZurgMenus', 'get_footer_links_backup'),
             'before'          => false,
             'after'           => false,
             'link_before'     => false,
@@ -121,6 +117,42 @@ class ZurgMenus extends Zurg {
         );
 
         wp_nav_menu($settings);
+    }
+
+
+    // Backup Footer Links Pages Menu
+    // --
+    // Displays a list of WordPress Pages as links
+    // Fallback for secondary navigation
+    // $args: array containing prevous settings
+    // wp_page_menu($array)
+    // http://codex.wordpress.org/Function_Reference/wp_page_menu
+
+    public function get_footer_links_backup() {
+
+        $args = func_get_args();
+
+        $settings = array(
+            'depth'       => $args[0]['depth'],
+            'sort_column' => 'menu_order, post_title',
+            'menu_class'  => false,
+            'include'     => false,
+            'exclude'     => false,
+            'echo'        => true,
+            'show_home'   => false,
+            'link_before' => false,
+            'link_after'  => false,
+        );
+
+        add_filter('wp_page_menu', array('ZurgMenus', 'clean_page_menu'));
+
+        wp_page_menu( $settings );
+
+    }
+
+
+    public function clean_page_menu($menu) {
+        return preg_replace( array( '#^<div[^>]*>#', '#</div>$#' ), '', $menu );
     }
 
 }

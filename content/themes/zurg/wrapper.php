@@ -33,7 +33,7 @@
 
         <section class="container cf">
             <div class="content">
-                <div id="main" role="main" class="main-wide">
+                <div id="main" role="main">
                     <? include ZurgWrapper::zurg_template_path(); ?>
                 </div>
             </div>
@@ -41,10 +41,10 @@
 
         <? get_footer( ZurgWrapper::zurg_template_base() ); ?>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="<?=get_template_directory_uri()?>/assets/js/jquery.min.js"><\/script>')</script>
 
-        <script src="<?= get_template_directory_uri(); ?>/assets/js/wp-init.min.js"></script>
+        <script src="<?= get_template_directory_uri(); ?>/assets/js/zurg.min.js"></script>
 
         <? wp_footer(); ?>
 

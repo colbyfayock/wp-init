@@ -3,7 +3,8 @@
     <div class="content">
 
         <div class="row">
-            <div class="fourcol nav-logo">
+
+            <div class="twelvecol">
                 <? if(is_home()) : ?>
                     <h1 class="h1">
                         <a href="<?=home_url()?>">
@@ -17,17 +18,17 @@
                         </a>
                     </span>
                 <? endif; ?>
+                <p class="tagline">
+                    <? bloginfo('description'); ?>
+                </p>
             </div>
-            <div class="eightcol last nav-links">
+
+            <div class="twelvecol">
                 <?=ZurgMenus::get_primary_nav()?>
             </div>
+
         </div>
 
     </div>
 
 </nav>
-
-
-<span class="tagline">
-    <? bloginfo('description'); ?>
-</span>

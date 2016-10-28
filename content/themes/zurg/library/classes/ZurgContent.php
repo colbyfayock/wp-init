@@ -11,6 +11,8 @@ class ZurgContent extends Zurg {
         add_filter( 'excerpt_more', 'clean_excerpt_links' );
         add_filter( 'excerpt_length', array( $this, 'get_excerpt_length' ), 999 );
 
+        add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption' ) );
+
     }
 
 
@@ -29,7 +31,7 @@ class ZurgContent extends Zurg {
             'audio',    // audio
             'chat'      // chat transcript
         );
-        
+
         add_theme_support( 'post-formats', $formats );
 
     }

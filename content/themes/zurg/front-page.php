@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="eightcol center">
+    <div class="twelvecol">
         <? if (have_posts()) : ?>
             <? while (have_posts()) : the_post(); ?>
 

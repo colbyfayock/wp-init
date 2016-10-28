@@ -1,0 +1,15 @@
+.alignnone {
+    float: none;
+}
+
+.alignright {
+    @extend .float-right;
+}
+
+.alignleft {
+    @extend .float-left;
+}
+
+.aligncenter {
+    @extend .center;
+}

@@ -12,7 +12,7 @@ class ZurgImages extends Zurg {
 
         add_theme_support( 'post-thumbnails' );
         set_post_thumbnail_size( 125, 125, true );
-        
+
         add_filter( 'init', array( $this, 'setup_custom_image_sizes' ) );
 
         add_filter( 'the_content', array( $this, 'clean_image_tags' ) );
@@ -37,7 +37,7 @@ class ZurgImages extends Zurg {
         add_filter( 'image_size_names_choose', array( $this, 'register_custom_image_size_names' ) );
 
     }
-    
+
 
     public function register_custom_image_size_names( $sizes ) {
 
@@ -45,7 +45,7 @@ class ZurgImages extends Zurg {
             'zurg-thumb-600x150' => __('Custom Size 1'),
             'zurg-thumb-300x300' => __('Custom Size 2'),
         );
-        
+
         return array_merge( $sizes, $sizes_custom );
 
     }

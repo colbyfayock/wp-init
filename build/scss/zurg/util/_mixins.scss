@@ -1,0 +1,5 @@
+@mixin box-sizing($setting) {
+
+    @include prefixer( box-sizing, $setting, moz spec );
+
+}

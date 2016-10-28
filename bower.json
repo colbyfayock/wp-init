@@ -4,6 +4,7 @@
   "devDependencies": {
     "bourbon": "~4.2.3",
     "fontawesome": "~4.3.0",
-    "jquery.fitvids": "fitvids#^1.1.0"
+    "jquery.fitvids": "fitvids#^1.1.0",
+    "fitvids": "jquery.fitvids#^1.2.0"
   }
 }

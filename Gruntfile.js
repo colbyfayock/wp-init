@@ -22,7 +22,7 @@ module.exports = function(grunt) {
                     './build/js/main.js'
 
                 ],
-                dest: './content/themes/colbyfayock/assets/js/colbyfayock.js',
+                dest: './content/themes/zurg/assets/js/zurg.js',
             },
 
         },
@@ -37,8 +37,8 @@ module.exports = function(grunt) {
             },
             js: {
                 files: {
-                    './content/themes/colbyfayock/assets/js/scripts.min.js': [
-                        './content/themes/colbyfayock/assets/js/scripts.js'
+                    './content/themes/zurg/assets/js/zurg.min.js': [
+                        './content/themes/zurg/assets/js/zurg.js'
                     ]
                 }
             }
@@ -50,7 +50,7 @@ module.exports = function(grunt) {
             },
             dist: {
                 files: {
-                    './content/themes/colbyfayock/style.css': './build/scss/style.scss'
+                    './content/themes/zurg/style.css': './build/scss/main.scss'
                 }
             }
         },
@@ -96,23 +96,24 @@ module.exports = function(grunt) {
 
         watch: {
             css: {
-                files: './build/scss/**/**/**/*.scss',
+                files: './build/scss/**/*.scss',
                 tasks: [
-                    'sass'
+                    'css'
                 ]
             },
             js: {
-                files: './build/js/**/**/**/*.js',
+                files: './build/js/**/*.js',
                 tasks: [
                     'js'
                 ]
-            },
+            }
         }
 
     });
 
     grunt.registerTask('default', [
-        // 'rsync'
+        'css',
+        'js'
     ]);
 
     grunt.registerTask('css', [
@@ -120,14 +121,8 @@ module.exports = function(grunt) {
     ]);
 
     grunt.registerTask('js', [
-        // 'concat',
-        // 'uglify'
-        // node r.js -o build.js
-    ]);
-
-    grunt.registerTask('build', [
-        'css',
-        'js'
+        'concat',
+        'uglify'
     ]);
 
     grunt.registerTask('deploy', [

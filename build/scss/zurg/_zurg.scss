@@ -1,0 +1,32 @@
+/* Zurg
+ * --
+ * Simple theme starter foundation
+ */
+
+@import '../../../bower_components/bourbon/app/assets/stylesheets/bourbon';
+@import '../../../bower_components/neat/app/assets/stylesheets/neat';
+@import '../../../bower_components/normalize.css/normalize';
+
+@import 'settings/settings';
+@import '../settings';
+@import 'util/util';
+
+* {
+    @include box-sizing( border-box );
+}
+
+body {
+    font-family: $font-family-base;
+    background-color: white;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+@import 'components/components';
+@import 'wordpress/wordpress';
+
+@import '../../../bower_components/fontawesome/scss/font-awesome';
